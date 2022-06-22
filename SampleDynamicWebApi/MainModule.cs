@@ -1,15 +1,18 @@
+using System.Text.Json.Serialization;
+using Authorization;
+using Child;
 using Core;
 
 namespace SampleDynamicWebApi;
 
-[DependsOn(Dependencies = new []{typeof(ChildModule.ChildModule)})]
+[DependsOn(Dependencies = new []{typeof(ChildModule), typeof(AuthorizationModule)})]
 public class MainModule : ICoreModule
 {
     public void Configure(WebApplicationBuilder builder)
     {
         Console.WriteLine("Call MainModule.Configure");
-        // Add services to the container.
-        builder.Services.AddRazorPages();
+        builder.Services.AddControllers();
+        builder.Services.AddScopedEx<IChildService, ChildService>();
     }
 
     public void Initialize(WebApplication app)
@@ -28,8 +31,6 @@ public class MainModule : ICoreModule
 
         app.UseRouting();
 
-        app.UseAuthorization();
-
-        app.MapRazorPages();
+        app.MapControllers();
     }
 }

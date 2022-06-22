@@ -4,7 +4,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDynamicWebApi", "Samp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{386C0DD2-32C1-43F3-90BB-A988B5362328}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildModule", "ChildModule\ChildModule.csproj", "{F1D8AD38-47B6-41D0-BFF0-9AFCB6AD4221}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Child", "Child\Child.csproj", "{F1D8AD38-47B6-41D0-BFF0-9AFCB6AD4221}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization", "Authorization\Authorization.csproj", "{6CE52B19-5C2C-4640-937F-8FA2C27398BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +26,9 @@ Global
 		{F1D8AD38-47B6-41D0-BFF0-9AFCB6AD4221}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1D8AD38-47B6-41D0-BFF0-9AFCB6AD4221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1D8AD38-47B6-41D0-BFF0-9AFCB6AD4221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CE52B19-5C2C-4640-937F-8FA2C27398BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE52B19-5C2C-4640-937F-8FA2C27398BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE52B19-5C2C-4640-937F-8FA2C27398BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE52B19-5C2C-4640-937F-8FA2C27398BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
