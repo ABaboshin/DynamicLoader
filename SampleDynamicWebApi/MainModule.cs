@@ -8,11 +8,14 @@ namespace SampleDynamicWebApi;
 [DependsOn(Dependencies = new []{typeof(ChildModule), typeof(AuthorizationModule)})]
 public class MainModule : ICoreModule
 {
-    public void Configure(WebApplicationBuilder builder)
+    public void Configure(IWebHostBuilder builder)
     {
         Console.WriteLine("Call MainModule.Configure");
-        builder.Services.AddControllers();
-        builder.Services.AddScopedEx<IChildService, ChildService>();
+        builder.ConfigureServices(services =>
+        {
+            services.AddControllers();
+            services.AddScopedEx<IChildService, ChildService>();
+        });
     }
 
     public void Initialize(WebApplication app)

@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Core;
 
 public class Application : IApplication
 {
-    public WebApplicationBuilder Builder { get; private set; }
+    public IWebHostBuilder Builder { get; private set; }
     public Type Module { get; private set; }
 
     private List<ICoreModule> _modules = new List<ICoreModule>();
     private WebApplication _application;
 
-    public Application(WebApplicationBuilder builder, Type module)
+    public Application(IWebHostBuilder builder, Type module)
     {
         Builder = builder;
         Module = module;
@@ -26,7 +27,7 @@ public class Application : IApplication
         {
             module.Configure(Builder);
         }
-
+        
         _application = Builder.Build();
 
         foreach (var module in _modules)

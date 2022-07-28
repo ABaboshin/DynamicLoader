@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Child", "Child\Child.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization", "Authorization\Authorization.csproj", "{6CE52B19-5C2C-4640-937F-8FA2C27398BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacIntegration", "AutofacIntegration\AutofacIntegration.csproj", "{3EABC082-800C-4A13-806C-2902A549F3D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{6CE52B19-5C2C-4640-937F-8FA2C27398BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CE52B19-5C2C-4640-937F-8FA2C27398BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CE52B19-5C2C-4640-937F-8FA2C27398BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EABC082-800C-4A13-806C-2902A549F3D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EABC082-800C-4A13-806C-2902A549F3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EABC082-800C-4A13-806C-2902A549F3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EABC082-800C-4A13-806C-2902A549F3D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

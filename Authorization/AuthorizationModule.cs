@@ -1,16 +1,23 @@
-﻿using Castle.DynamicProxy;
+﻿using Autofac;
+using Castle.DynamicProxy;
 using Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Authorization;
 
+[DependsOn(Dependencies = new []{typeof(AutofacIntegrationModule)})]
 public class AuthorizationModule : ICoreModule
 {
-    public void Configure(WebApplicationBuilder builder)
+    public void Configure(IWebHostBuilder builder)
     {
-        builder.Services.AddSingleton<IInterceptor, AuthorizationInterceptor>();
+        builder.ConfigureServices(services =>
+        {
+            services.AddSingleton<IInterceptor, AuthorizationInterceptor>();
+        });
+        
         Console.WriteLine("AuthorizationModule.Configure");
     }
 
